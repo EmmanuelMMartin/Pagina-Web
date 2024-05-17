@@ -1,12 +1,20 @@
 <?php
-$host = 'localhost';
-$bd = 'bienesraices';
-$user = 'root';
-$pass = 'root';
 
-$conexion = pg_connect("host=$host dbname=$bd user=$user password=$pass");
+$servername = "localhost";
+$username = "root";
+$password = "12345"; 
+$dbname = "BienesRaices";
 
-if (!$conexion) {
-    die("Error de conexión a la base de datos.");
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
 }
+echo "Conexión exitosa";
+
+// Tu código para trabajar con la base de datos aquí
+
+$conn->close();
 ?>

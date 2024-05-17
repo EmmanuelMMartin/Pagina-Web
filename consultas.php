@@ -1,66 +1,42 @@
 <?php
 
-class consultas
+class Consultas
 {
+    private $conn;
 
     public function __construct()
     {
-        //print_r("Construyendo Clase Formulario<br>");
+        $this->conn = $this->conectarSQL();
     }
 
-    public function ValidarUsuario($strUsuario, $strPass)
+    private function conectarSQL()
     {
-        //echo $strUsuario;
-        $ch = curl_init();
-
-        curl_setopt($ch, CURLOPT_URL, "http://localhost:8080/restapi/index.php?Usuario=Javi");
-        curl_setopt($ch, CURLOPT_POST, TRUE);
-        //curl_setopt($ch, CURLOPT_POSTFIELDS, ["Usuario" => "Javi"]);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        $output = curl_exec($ch);
-
-        curl_close($ch);
-
-        $arrUsuarios = json_decode($output);
-        foreach ($arrUsuarios as $arrUsuario) {
-            if ($arrUsuario->Usuario == $strUsuario && $arrUsuario->Pass == $strPass)
-                return true;
-        }
-        return false;
-    }
-
-    public function ConectarSQL()
-    {
-        $strUser = "admin";
-        $strPass = "123456";
+        $strUser = "root";
+        $strPass = "12345"; 
         $strServer = "localhost";
-        $strDB = "pruebas";
-        $strQuery = "SELECT * FROM tacos AS T
-                        LEFT JOIN tacoingredientes AS TI
-                        ON T.idTaco = TI.idTaco -- AND
-                        LEFT JOIN ingredientes AS I
-                        ON TI.idIngrediente = I.idIngrediente
-                        ORDER BY Precio DESC";
+        $strDB = "BienesRaices";
 
-        $strQuery = "SELECT * FROM tacos";                
-        //$objConexion = mysqli_connect($strServer, $strUser, $strPass, $strDB);
-        $objConexion = new mysqli($strServer, $strUser, $strPass, $strDB);
-        if ($objConexion->connect_errno) {
-            echo "Failed to connect to MySQL: " . $objConexion->connect_error;
-            exit();
+        $conn = new mysqli($strServer, $strUser, $strPass, $strDB);
+
+        if ($conn->connect_errno) {
+            die("Failed to connect to MySQL: " . $conn->connect_error);
         }
-        //$objResultado = mysqli_query($objConexion, $strQuery);
-        $objResultado = $objConexion->query($strQuery);
-        
-        //$arrInfo = mysqli_fetch_all($objResultado, MYSQLI_ASSOC);
-        $arrInfo = $objResultado->fetch_all(MYSQLI_ASSOC);
-        return $arrInfo;
+
+        return $conn;
     }
 
-    public function ImprimeBonito($objImprimir)
+    public function validarUsuario($strUsuario, $strPass)
     {
-        echo "<pre>";
-        print_r($objImprimir);
-        echo "</pre>";
+        $sql = "SELECT * FROM usuarios WHERE usuario = ? AND password = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("ss", $strUsuario, $strPass);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
