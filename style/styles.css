@@ -19,10 +19,18 @@ header {
     background-color: #5695DB;
     background-position: center;
     background-size: cover;
-    padding: 3rem;
+    padding: 1rem;
 }
 img{
     width: 100%;
+}
+a{
+    color: white;
+    text-decoration: none;
+    margin: 2rem;
+}
+a:hover{
+    color: #ffd700;
 }
 
 /* Header Styles */
@@ -41,50 +49,31 @@ img{
 }
 
 /* Navigation Styles */
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    color: #ffd700;
+nav {
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Button Styles */
 button {
-    padding: 1.3em 3em;
-    font-size: 12px;
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #1d0296;
+    color: white;
     background-color: #2952a0;
     border: none;
-    border-radius: 45px;
+    border-radius: 40px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
     cursor: pointer;
-    outline: none;
 }
-
 button:hover {
+    color: #ffd700;
     background-color: #23c4af;
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-    color: #fff;
     transform: translateY(-7px);
 }
-
 button:active {
     transform: translateY(-1px);
 }
@@ -268,6 +257,31 @@ footer {
 
 .menu-item:nth-of-type(4) {
     background-image: url(https://cdn.icon-icons.com/icons2/3042/PNG/512/tiktok_logo_icon_189255.png);
+}
+
+/* formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+.formulario{
+    padding: 4rem;
+}
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.error {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
 }
 
 /* foooter */
