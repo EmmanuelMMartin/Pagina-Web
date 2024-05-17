@@ -9,16 +9,20 @@ html {
 body {
     font-size: 1.6rem;
     line-height: 2;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .contenedor{
     margin: 0 auto;
     width: min(90%, 120rem);
 }
 header {
-    background-color: #8dc0fa;
+    background-color: #5695DB;
     background-position: center;
     background-size: cover;
     padding: 3rem;
+}
+img{
+    width: 100%;
 }
 
 /* Header Styles */
@@ -27,11 +31,13 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+.header__img{
+    max-width: 15%;
+}
 
 .titulo {
     margin: 0;
     color: #000000;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* Navigation Styles */
@@ -218,15 +224,10 @@ button:active {
 footer {
     width: 100%;
     padding: 2rem;
-    background-color: #0e0e0e;
+    background-color: #5695DB;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-}
-
-.logo {
-    height: 80px;
-    margin-bottom: 1rem;
 }
 
 .icono-redes-sociales, .footer-menu {
@@ -269,12 +270,15 @@ footer {
     background-image: url(https://cdn.icon-icons.com/icons2/3042/PNG/512/tiktok_logo_icon_189255.png);
 }
 
+/* foooter */
 .footer-menu {
     list-style-type: none;
-    color: #f2f2f2;
+    color: white;
     font-size: 18px;
 }
-
+.footer__img{
+    max-width: 15%;
+}
 .menu-item {
     margin: 1rem 1.5rem;
 }
