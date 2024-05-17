@@ -1,0 +1,284 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Header Styles */
+.header {
+    background-color: #8dc0fa;
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.titulo {
+    margin: 0;
+    color: #000000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Button Styles */
+button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #1d0296;
+    background-color: #2952a0;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: #23c4af;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #f8f8f8;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #666;
+    text-align: center;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2952a0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #2952a0;
+}
+
+/* Two Column Section Styles */
+.two-column-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.two-column-section img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.column-left {
+    flex: 1;
+}
+
+.column-left .container {
+    text-align: center;
+}
+
+.column-left img {
+    max-width: 100%;
+}
+
+.column-right {
+    flex: 1;
+}
+
+.column-right h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.column-right p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.column-right a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.column-right a:hover {
+    text-decoration: underline;
+}
+
+/* Gallery Section Styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+}
+
+.gallery-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery h4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(65, 152, 223, 0.8);
+    text-align: center;
+}
+
+.gallery-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery-item {
+    flex: 0 0 calc(33.333% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color: #0e0e0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.icono-redes-sociales, .footer-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.menu-item {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid #f2f2f2;
+    margin: 1rem;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu8BoxTzPYrLkxf0ZialNBPox10Fx4QjmadS571JQxtQ&s);
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.menu-item:hover {
+    opacity: 1;
+    background-color: #121212;
+    filter: invert(1);
+}
+
+.menu-item:nth-of-type(2) {
+    background-image: url(https://img.freepik.com/vector-premium/circulo-negro-logo-instagram_197792-7412.jpg?size=338&ext=jpg&ga=GA1.1.1788068356.1715817600&semt=ais_user);
+}
+
+.menu-item:nth-of-type(3) {
+    background-image: url(https://img.freepik.com/premium-vector/new-twitter-logo-x-2023-twitter-x-logo-vector-download_691560-10794.jpg);
+}
+
+.menu-item:nth-of-type(4) {
+    background-image: url(https://cdn.icon-icons.com/icons2/3042/PNG/512/tiktok_logo_icon_189255.png);
+}
+
+.footer-menu {
+    list-style-type: none;
+    color: #f2f2f2;
+    font-size: 18px;
+}
+
+.menu-item {
+    margin: 1rem 1.5rem;
+}
