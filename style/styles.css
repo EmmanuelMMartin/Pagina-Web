@@ -1,4 +1,4 @@
-/* General Styles */
+/* Estilos generales */
 html {
     box-sizing: border-box;
     font-size: 62.5%; /* 1rem = 10px */
@@ -34,7 +34,7 @@ a:hover{
     color: #ffd700;
 }
 
-/* Header Styles */
+/* Estilo del header*/
 .header{
     display: flex;
     justify-content: space-between;
@@ -49,13 +49,13 @@ a:hover{
     color: #000000;
 }
 
-/* Navigation Styles */
+/* Estilos de navegacion */
 nav {
     display: flex;
     justify-content: space-around;
 }
 
-/* Button Styles */
+/* Estilos de boton */
 button {
     padding: 1.5rem 3rem;
     font-size: 1.5rem;
@@ -79,7 +79,7 @@ button:active {
     transform: translateY(-1px);
 }
 
-/* Hero Section Styles */
+/* Seccion Hero*/
 .hero {
     background-color: #f8f8f8;
     padding: 100px 0;
@@ -115,7 +115,7 @@ button:active {
     background-color: #2952a0;
 }
 
-/* Two Column Section Styles */
+/* Estilos seccion de dos colunas*/
 .two-column-section {
     display: flex;
     justify-content: space-between;
@@ -166,7 +166,7 @@ button:active {
     text-decoration: underline;
 }
 
-/* Gallery Section Styles */
+/* Estilos de la galeria */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -212,7 +212,7 @@ button:active {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer Styles */
+/* Estilos del Footer */
 footer {
     width: 100%;
     padding: 2rem;
@@ -304,8 +304,8 @@ input, textarea {
     margin: 1rem 1.5rem;
 }
 
-/*Login styles*/
-.form {
+/* Estilos del login */
+.login-form-container .form {
     background-color: #fff;
     text-align: center;
     margin: auto;
@@ -316,7 +316,7 @@ input, textarea {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
   
-  .form-title {
+  .login-form-container .form-title {
     font-size: 3.25rem;
     line-height: 4.75rem;
     font-weight: 600;
@@ -324,17 +324,18 @@ input, textarea {
     color: #000;
   }
   
-  .input-container {
+  .login-form-container .input-container {
     position: relative;
   }
   
-  .input-container input, .form button {
+  .login-form-container .input-container input,
+  .login-form-container .form button {
     outline: none;
     border: 1px solid #ffffffd2;
     margin: 18px 0;
   }
   
-  .input-container input {
+  .login-form-container .input-container input {
     background-color: #fff;
     padding: 1rem;
     padding-right: 3rem;
@@ -345,7 +346,7 @@ input, textarea {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   }
   
-  .submit {
+  .login-form-container .submit {
     display: block;
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
@@ -361,13 +362,148 @@ input, textarea {
     text-transform: uppercase;
   }
   
-  .signup-link {
+  .login-form-container .signup-link {
     color: #6B7280;
     font-size: 0.875rem;
     line-height: 1.25rem;
     text-align: center;
   }
   
-  .signup-link a {
+  .login-form-container .signup-link a {
     text-decoration: underline;
   }
+  
+  /* Estilos del registro */
+  .register-form-container .form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #ececec;
+    color: #000000;
+    border: 1px solid #cccccc;
+  }
+  
+  .register-form-container .title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #4F46E5;
+  }
+  
+  .register-form-container .title::before,
+  .register-form-container .title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #4F46E5;
+  }
+  
+  .register-form-container .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .register-form-container .message,
+  .register-form-container .signin {
+    font-size: 14.5px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .register-form-container .signin {
+    text-align: center;
+  }
+  
+  .register-form-container .signin a {
+    color: #4F46E5;
+  }
+  
+  .register-form-container .signin a:hover {
+    text-decoration: underline royalblue;
+  }
+  
+  .register-form-container .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .register-form-container .form label {
+    position: relative;
+  }
+  
+  .register-form-container .form label .input {
+    background-color: #ffffff;
+    color: #000000;
+    width: 100%;
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(204, 204, 204, 0.397);
+    border-radius: 10px;
+  }
+  
+  .register-form-container .form label .input + span {
+    color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .register-form-container .form label .input:placeholder-shown + span {
+    top: 12.5px;
+    font-size: 0.9em;
+  }
+  
+  .register-form-container .form label .input:focus + span,
+  .register-form-container .form label .input:valid + span {
+    color: #4F46E5;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .register-form-container .input {
+    font-size: medium;
+  }
+  
+  .register-form-container .submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transition: .3s ease;
+    background-color: #4F46E5;
+  }
+  
+  .register-form-container .submit:hover {
+    background-color: #00bfff96;
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+  

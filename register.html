@@ -25,20 +25,30 @@
         </div>
     </header>
 
-    <section class="contenedor login-form-container">
-        <form class="form">
-            <p class = "form-title">Inicia sesion con tu cuenta</p>
-            <div class = "input-container">
-            <input type="email" placeholder="Ingresa tu email">
-            <span>
-            </span> 
-        </div>
-        <div class="input-container">
-            <input type="Contraseña" placeholder="Ingresa tu contraseña">
-        </div>
-        <button class="submit" type="submit">Iniciar sesión</button>
-        <p class="singup-link">¿No tienes cuenta?</p>
-        <button><a href= "register.html">Crea una cuenta</a></button>
+    <section class="contenedor register-form-container">
+        <form id="register-form" class="form" name="paginawebventas" method="POST" action="send.php">
+            <p class="title">Registro</p>
+            <p class="message">Registrate para obtener acceso.</p>
+            <div class="flex">
+                <label>
+                    <input class="input nombre-input" type="text" name="nombre" required>
+                    <span>Nombre</span>
+                </label>
+                <label>
+                    <input class="input apellido-input" type="text" name="apellido" required>
+                    <span>Apellido</span>
+                </label>
+            </div>  
+            <label>
+                <input class="input" type="email" name="correo" required>
+                <span>Email</span>
+            </label> 
+            <label>
+                <input class="input" type="password" name="contraseña" required>
+                <span>Contraseña</span>
+            </label>
+            <button class="submit" type="submit" name="registro">Submit</button>
+            <p class="signin">Ya tienes una cuenta? <a href="login.html">Signin</a></p>
         </form>
     </section>
 
